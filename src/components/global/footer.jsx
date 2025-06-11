@@ -24,7 +24,7 @@ function Footer() {
     ];
 
     return (
-        <Box sx={{ backgroundColor: '#5c83e6' }}>
+        <Box sx={{ backgroundColor: '#1976D2' }}>
             <Container maxWidth="lg">
                 <Box sx={{
                     py: 5,
@@ -114,7 +114,7 @@ function Footer() {
                     </Grid>
                 </Box>
             </Container>
-            <Box sx={{ backgroundColor: '#4675eb' }}>
+            <Box sx={{ backgroundColor: '#176bbd' }}>
                 <Container>
                     <Box sx={{
                         display: 'flex',

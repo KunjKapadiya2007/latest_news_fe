@@ -97,9 +97,9 @@ function Blog() {
 
     if (blogData.length === 0) {
         return (
-            <Box sx={{ mt: 5 }}>
+            <Box sx={{ my: 23 }}>
                 <Container maxWidth="lg">
-                    <Typography sx={{ textAlign: 'center', fontSize: '18px' }}>
+                    <Typography sx={{ textAlign: 'center', fontSize: '18px' , color:'#000' }}>
                         No blogs found for this category.
                     </Typography>
                 </Container>
@@ -136,7 +136,7 @@ function Blog() {
                                 }
                             }}
                         >
-                            <Box sx={{ mb: 4, textAlign: 'center', position: 'relative' }}>
+                            <Box sx={{ textAlign: 'center'}}>
                                 <Typography
                                     component="h4"
                                     variant="h4"

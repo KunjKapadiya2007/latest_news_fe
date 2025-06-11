@@ -7,7 +7,7 @@ import {
     Drawer,
     List,
     ListItem,
-    ListItemText
+    ListItemText, useMediaQuery, InputBase,
 } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -19,10 +19,15 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import Image from 'next/image';
 import logo from '../../assets/global/EarnKaro-HD-Logo.png';
 import { useRouter } from 'next/navigation';
+import {useTheme} from "@mui/material/styles";
+import SearchIcon from "@mui/icons-material/Search";
 
 function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const router = useRouter();
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const [searchTerm, setSearchTerm] = useState('');
 
     const toggleDrawer = (open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) return;
@@ -41,6 +46,12 @@ function Navbar() {
         { label: "LATEST NEWS", path: "/latest-news" },
         { label: "AI TOOLS", path: "/ai-tools" }
     ];
+
+    const handleSearch = () => {
+        if (searchTerm.trim()) {
+            router.push(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
+        }
+    };
 
     return (
         <>
@@ -111,10 +122,28 @@ function Navbar() {
                     ))}
                 </Box>
 
-                <Box>
-                    <IconButton aria-label="Search">
-                        <Search sx={{ color: '#333' }} />
-                    </IconButton>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    {!isMobile && (
+                        <>
+                            <InputBase
+                                placeholder="Search…"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+                                sx={{
+                                    px: 1,
+                                    py: 0.5,
+                                    border: '1px solid #ccc',
+                                    borderRadius: '4px',
+                                    fontSize: '0.9rem',
+                                    width: 180,
+                                }}
+                            />
+                            <IconButton onClick={handleSearch} sx={{ color: '#000' }}>
+                                <SearchIcon />
+                            </IconButton>
+                        </>
+                    )}
                 </Box>
             </Box>
 
