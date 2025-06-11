@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import {Box, IconButton, InputAdornment, TextField, Typography} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
