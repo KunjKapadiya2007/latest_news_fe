@@ -1,5 +1,5 @@
 import React from 'react';
-import TermsAndCondition from "@/components/terms-condition/termsAndCondition";
+import TermsAndCondition from "../../components/terms-condition/termsAndCondition";
 import {Box} from "@mui/material";
 
 function Page() {

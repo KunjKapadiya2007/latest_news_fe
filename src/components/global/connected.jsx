@@ -6,9 +6,9 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import bgimg4 from "@/assets/home/EK-credit-card-banner-1024x1024.jpg";
-import bgimg5 from "@/assets/home/Amazon-India-affiliate-program-100x70.jpg";
-import bgimg6 from "@/assets/home/EK-banner.png";
+import bgimg4 from "../../assets/home/EK-credit-card-banner-1024x1024.jpg";
+import bgimg5 from "../../assets/home/Amazon-India-affiliate-program-100x70.jpg";
+import bgimg6 from "../../assets/home/EK-banner.png";
 
 function Connected() {
 

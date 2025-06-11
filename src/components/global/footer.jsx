@@ -6,7 +6,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import logo from "@/assets/global/EarnKaro-HD-Logo.png";
+import logo from "../../assets/global/EarnKaro-HD-Logo.png";
 
 function Footer() {
     const social = [

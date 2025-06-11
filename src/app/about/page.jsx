@@ -1,8 +1,8 @@
 import React from 'react';
-import Investors from "@/components/about/investors";
-import Marketing from "@/components/about/marketing";
+import Investors from "../../components/about/investors";
+import Marketing from "../../components/about/marketing";
+import Team from "../../components/about/team";
 import {Box} from "@mui/material";
-import Team from "@/components/about/team";
 
 function Page() {
     return (

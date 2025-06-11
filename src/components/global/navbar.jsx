@@ -17,7 +17,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import Image from 'next/image';
-import logo from '@/assets/global/EarnKaro-HD-Logo.png';
+import logo from '../../assets/global/EarnKaro-HD-Logo.png';
 import { useRouter } from 'next/navigation';
 
 function Navbar() {
@@ -37,9 +37,9 @@ function Navbar() {
     ];
 
     const menuItems = [
-        "EARN MONEY",
-        "LATEST NEWS",
-        "AI TOOLS"
+        { label: "EARN MONEY", path: "/earn-money" },
+        { label: "LATEST NEWS", path: "/latest-news" },
+        { label: "AI TOOLS", path: "/ai-tools" }
     ];
 
     return (
@@ -78,12 +78,11 @@ function Navbar() {
                     {menuItems.map((item, index) => (
                         <Box
                             key={index}
+                            onClick={() => router.push(item.path)}
                             sx={{
                                 position: 'relative',
                                 cursor: 'pointer',
-                                '&:hover .underline': {
-                                    width: '100%',
-                                },
+                                '&:hover .underline': { width: '100%' },
                             }}
                         >
                             <Typography
@@ -94,7 +93,7 @@ function Navbar() {
                                     textTransform: 'uppercase',
                                 }}
                             >
-                                {item}
+                                {item.label}
                             </Typography>
                             <Box
                                 className="underline"
@@ -141,24 +140,38 @@ function Navbar() {
                                 </IconButton>
                             ))}
                         </Box>
-                        <IconButton onClick={toggleDrawer(false)} sx={{ color: 'white' }}>
+                        <IconButton
+                            onClick={toggleDrawer(false)}
+                            sx={{
+                                color: 'white',
+                                backgroundColor: 'transparent',
+                                '&:hover': {
+                                    backgroundColor: 'transparent',
+                                },
+                            }}
+                        >
                             <CloseIcon />
                         </IconButton>
                     </Box>
 
                     <List>
-                        {menuItems.map((text, index) => (
+                        {menuItems.map((item, index) => (
                             <ListItem
                                 button
                                 key={index}
+                                onClick={() => {
+                                    router.push(item.path);
+                                    setDrawerOpen(false);
+                                }}
                                 sx={{
                                     '&:hover': {
                                         backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                        borderRadius:'8px'
                                     },
                                 }}
                             >
                                 <ListItemText
-                                    primary={text}
+                                    primary={item.label}
                                     primaryTypographyProps={{
                                         fontWeight: 'bold',
                                         textTransform: 'uppercase',

@@ -1,10 +1,10 @@
 import React from 'react';
-import ContactUs from "../../components/contact/contactUs";
+import Blog from '../../components/home/blog'
 
 function Page() {
     return (
         <>
-            <ContactUs/>
+            <Blog/>
         </>
     );
 }

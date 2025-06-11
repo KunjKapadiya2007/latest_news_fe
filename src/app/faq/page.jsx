@@ -1,5 +1,5 @@
 import React from 'react';
-import Faq from "@/components/faq/faq";
+import Faq from "../../components/faq/faq";
 
 function Page() {
     return (

@@ -4,9 +4,9 @@ import React from 'react';
 import { Box, Typography, Divider, Grid, Container, useMediaQuery } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Image from 'next/image';
-import kalaari from '@/assets/about/investor/ck_kalaari_capital.png';
-import korea from '@/assets/about/investor/korea-investment-1654842838.png';
-import ratanTata from '@/assets/about/investor/ck_ratan_tata.png';
+import kalaari from '../../assets/about/investor/ck_kalaari_capital.png';
+import korea from '../../assets/about/investor/korea-investment-1654842838.png';
+import ratanTata from '../../assets/about/investor/ck_ratan_tata.png';
 
 const investors = [
     {

@@ -1,12 +1,12 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
-import person1 from '@/assets/about/team/rohan-img-1feb.jpg'
-import person2 from '@/assets/about/team/swati-img-1feb.jpg'
-import person3 from '@/assets/about/team/about_arumai_desktop.png'
-import img1 from '@/assets/about/team/aboutus1-1feb.jpg'
-import img2 from '@/assets/about/team/aboutus2-1feb-up.jpg'
-import img3 from '@/assets/about/team/aboutus3-1feb.jpg'
-import img4 from '@/assets/about/team/about-1-1655278708.jpg'
+import person1 from '../../assets/about/team/rohan-img-1feb.jpg'
+import person2 from '../../assets/about/team/swati-img-1feb.jpg'
+import person3 from '../../assets/about/team/about_arumai_desktop.png'
+import img1 from '../../assets/about/team/aboutus1-1feb.jpg'
+import img2 from '../../assets/about/team/aboutus2-1feb-up.jpg'
+import img3 from '../../assets/about/team/aboutus3-1feb.jpg'
+import img4 from '../../assets/about/team/about-1-1655278708.jpg'
 import Image from "next/image";
 
 function Team() {

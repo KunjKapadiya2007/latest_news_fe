@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Container, Grid, Typography} from "@mui/material";
 import Image from "next/image";
-import Connected from "@/components/global/connected";
+import Connected from "../../components/global/connected";
 import map from '../../assets/contact/EarnKaro-Address.png'
 import journey from '../../assets/contact/EarnKaro-App-Banner-1024x538.jpg'
 

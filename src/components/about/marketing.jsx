@@ -2,7 +2,7 @@ import React from "react";
 import {Box, Container, Grid, Typography} from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CircleIcon from '@mui/icons-material/Circle';
-import bgimg from '@/assets/about/marketing/top-banner-d-1655204891.jpg'
+import bgimg from '../../assets/about/marketing/top-banner-d-1655204891.jpg'
 import Image from "next/image";
 const steps = [
     {
